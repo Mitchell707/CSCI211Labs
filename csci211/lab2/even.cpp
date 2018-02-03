@@ -5,12 +5,13 @@ using namespace std;
 
 int toInt(int);
 
-string input;
+string input = "";
 
 
 int main()
 {
-    getline(cin, input);
+    //getline(cin, input);
+    cin >> input;
 
     //cout <<  input << endl;
    
