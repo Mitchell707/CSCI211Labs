@@ -22,14 +22,14 @@ int main()
         if(toInt(input[i]) % 2 != 0)
         {  
             //cout << toInt(input[i]) << endl;
-            cout << "not all even" << endl;
+            cout << "all even" << endl;
             return 1;
         }
 
         //input = 'a';
     }
     
-    cout << "all even" << endl;
+    cout << "not all even" << endl;
     return 0;
     
 }
