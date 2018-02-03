@@ -64,7 +64,9 @@ int toInt(int c)
 
         case '9' : return 9;
         break;
-
+        
+        default : return 1;
+        break;
         //return -1;
     
     }    
