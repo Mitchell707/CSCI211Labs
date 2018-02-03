@@ -10,10 +10,25 @@ string input;
 
 int main()
 {
-    cin >> input;
-    cout <<  input << endl;
+    getline(cin, input);
+
+    //cout <<  input << endl;
+   
+    
     for(int i = 0; i < input.size(); i++)
-    {
+    {   
+        /*
+        if(toInt(input[i + 1] >= 0))
+        {
+            if(toInt(input[i + 1]) % 2 != 0)
+            {
+                return 1;
+            }
+
+            i++;
+        }
+        else
+        */
         if(toInt(input[i]) % 2 != 0)
         {  
             //cout << toInt(input[i]) << endl;
@@ -65,7 +80,7 @@ int toInt(int c)
         case '9' : return 9;
         break;
         
-        default : return 1;
+        default : return -1;
         break;
         //return -1;
     
