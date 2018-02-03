@@ -11,7 +11,7 @@ string input;
 int main()
 {
     cin >> input;
-
+    cout <<  input << endl;
     for(int i = 0; i < input.size(); i++)
     {
         if(toInt(input[i]) % 2 != 0)
