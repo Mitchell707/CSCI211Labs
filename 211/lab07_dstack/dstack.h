@@ -8,8 +8,8 @@ using namespace std;
 class Dstack
 {
     private:
-        double *s;
-        double *top;
+        //double *s;
+        //double *top;
         int Lsize;
 
         class Node

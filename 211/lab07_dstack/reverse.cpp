@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    double value;
+    double value = 0;
     Dstack stack;
 
     // as long as there is input
