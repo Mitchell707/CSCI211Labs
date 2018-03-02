@@ -13,7 +13,8 @@ void Dstack::push(double value)
 {
     
     m_head = new Node(value, m_head); 
-    incrementSize();    
+    incrementSize();  
+
 }
 
 bool Dstack::pop(double &value)

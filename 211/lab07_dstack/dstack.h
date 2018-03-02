@@ -30,6 +30,7 @@ class Dstack
         int size(){return Lsize;};
         void incrementSize(){Lsize++;};
         void decrementSize(){Lsize--;};
+        void setSize(int val){Lsize = val;};
         bool empty();
         Dstack();
 
