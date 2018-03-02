@@ -10,7 +10,7 @@ class Dstack
     private:
         //double *s;
         //double *top;
-        int Lsize;
+        int Lsize = 0;
 
         class Node
         {
