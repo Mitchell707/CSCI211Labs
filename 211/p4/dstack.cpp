@@ -11,37 +11,36 @@ Dstack::Dstack()
 {
     m_head = NULL;
     m_length = 0;
-
 }
 
 void Dstack::push(double value)
 {
-    m_head = new Node(value, m_head);
-    increment();
+    
+    m_head = new Node(value, m_head); 
+    incrementSize();  
 
 }
 
 bool Dstack::pop(double &value)
 {
-    if(!isEmpty())
+    if(!empty())
     {
         value = m_head->m_value;
         Node *temp = m_head;
-        m_hehadd = m_head->m_next;
+        m_head = m_head->m_next;
         delete temp;
-        decrement();
+        decrementSize();
         
         return true;
-
     }
     else
     {
         return false;
-
+       
     }
 }
 
-bool Dstack::isEmpty()
+bool Dstack::empty()
 {
     if(size() == 0)
     {
@@ -49,5 +48,4 @@ bool Dstack::isEmpty()
     }
 
     return false;
-
 }
