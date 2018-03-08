@@ -12,27 +12,30 @@ using namespace std;
 class Dstack
 {
     private:
-        int Isize;
+        //double *s;
+        //double *top;
+        int Lsize = 0;
 
         class Node
         {
-            Node(double val, Node *next)
-            {m_value = val; m_next = next;}
-            double m_value;
-            Node *m_next;
+            public:
+                Node(double val, Node *next)
+                {m_value = val; m_next = next;}
+                double m_value;
+                Node *m_next;
 
         };
-        
         Node *m_head;
         int m_length;
 
     public:
         void push(double value);
         bool pop(double &value);
-        int size(){return Isize;};
-        void increment(){Isize++;};
-        void decrement(){Isize--;};
-        bool isEmpty();
+        int size(){return Lsize;};
+        void incrementSize(){Lsize++;};
+        void decrementSize(){Lsize--;};
+        void setSize(int val){Lsize = val;};
+        bool empty();
         Dstack();
 
 };
