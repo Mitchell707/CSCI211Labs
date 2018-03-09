@@ -14,7 +14,7 @@ class Dstack
     private:
         //double *s;
         //double *top;
-        int Lsize = 0;
+        int Lsize;
 
         class Node
         {
@@ -30,7 +30,7 @@ class Dstack
 
     public:
         void push(double value);
-        bool pop(double &value);
+        int pop();
         int size(){return Lsize;};
         void incrementSize(){Lsize++;};
         void decrementSize(){Lsize--;};

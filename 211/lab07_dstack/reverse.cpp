@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 using namespace std;
 #include "dstack.h"
@@ -25,3 +26,4 @@ int main()
 
     return 0;
 }
+*/

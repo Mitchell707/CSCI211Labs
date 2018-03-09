@@ -14,15 +14,16 @@ Dstack::Dstack()
 }
 
 void Dstack::push(double value)
-{
-    
+{    
     m_head = new Node(value, m_head); 
     incrementSize();  
 
 }
 
-bool Dstack::pop(double &value)
+int Dstack::pop()
 {
+    double value = 0;
+
     if(!empty())
     {
         value = m_head->m_value;
@@ -31,12 +32,12 @@ bool Dstack::pop(double &value)
         delete temp;
         decrementSize();
         
-        return true;
+        return value;
     }
     else
     {
-        return false;
-       
+        
+
     }
 }
 
