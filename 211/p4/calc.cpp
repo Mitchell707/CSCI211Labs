@@ -41,6 +41,24 @@ int main()
                 i++;
                 //count++;
             }
+            else if(input[i + 1] == '.')
+            {
+                if(isdigit(input[i + 2]))
+                {
+                    if(isdigit(input[i + 3]))
+                    {
+                        double temp = ((input[i] - 48) + ((input[i + 2] - 48) * .1) + (input[i + 3] - 48) * .01);
+                        //cout << temp << endl;
+                        num.push(temp);
+                        i = i + 3;
+                    }
+                    else
+                    {
+                        num.push(((input [i] + input[i + 2] - 48) * .1);
+                        i = i + 2;
+                    }
+                }
+            }
             else
             {
                 num.push(input[i] - 48);
