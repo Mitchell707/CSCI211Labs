@@ -37,9 +37,34 @@ int main()
         {
             if(isdigit(input[i + 1]))
             {
-                num.push(((input[i] - 48) * 10) + (input[i + 1] - 48));
-                i++;
-                //count++;
+                if(input[i + 2] == '.')
+                {
+                    if(isdigit(input[i + 3]))
+                    {
+                        if(isdigit(input[i + 4]))
+                        {
+                            double temp = ((input[i] - 48) * 10) + (input[i + 1] - 48) + ((input[i + 3] - 48) * .1) + ((input[i + 4] - 48) * .01);
+                            num.push(temp);
+                            i = i + 4;
+                        }
+                        else
+                        {
+                            num.push(((input[i] - 48) * 10) + (input[i + 1] - 48) + ((input[i + 3] - 48) * .1));
+                            i = i + 3;
+                        }
+                    }
+                    else
+                    {
+                        num.push(((input[i] - 48) * 10) + (input[i + 1] - 48));
+                        i = i + 2; 
+                    }
+                }
+                else
+                {
+                   num.push(((input[i] - 48) * 10) + (input[i + 1] - 48));
+                   i++;
+                    //count++;
+                }
             }
             else if(input[i + 1] == '.')
             {
@@ -47,8 +72,9 @@ int main()
                 {
                     if(isdigit(input[i + 3]))
                     {
+                        
+                        
                         double temp = ((input[i] - 48) + ((input[i + 2] - 48) * .1) + (input[i + 3] - 48) * .01);
-                        //cout << temp << endl;
                         num.push(temp);
                         i = i + 3;
                     }
