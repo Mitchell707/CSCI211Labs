@@ -58,6 +58,11 @@ int main()
                         i = i + 2;
                     }
                 }
+                else
+                {
+                    num.push(input[i] - 48);
+                    i++;
+                }
             }
             else
             {
