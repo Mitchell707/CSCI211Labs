@@ -54,7 +54,7 @@ int main()
                     }
                     else
                     {
-                        num.push(((input [i] + input[i + 2] - 48) * .1);
+                        num.push((((input[i] - 48) + (input[i + 2] - 48) * .1)));
                         i = i + 2;
                     }
                 }
