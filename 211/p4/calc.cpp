@@ -49,6 +49,24 @@ int main()
             //count++;
 
         }
+        else if(input[i] == '.')
+        {
+            if(isdigit(input[i + 1]))
+            {
+                if(isdigit(input[i + 2]))
+                {
+                    double temp = (((input[i + 1] - 48) * .1) + (input[i + 2] - 48) * .01);
+                    //cout << temp << endl;
+                    num.push(temp);
+                    i = i + 2;
+                }
+                else
+                {
+                    num.push((input[i + 1] - 48) * .1);
+                    i++;
+                }
+            }
+        }
         else
         {
             if(input[i] == '+')
@@ -66,7 +84,8 @@ int main()
             }
             else if(input[i] == '/')
             {
-                //num.push(div(num.pop(), num.pop()));
+
+                num.push(div(num.pop(), num.pop()));
             }
             else if(input[i] == '^')
             {

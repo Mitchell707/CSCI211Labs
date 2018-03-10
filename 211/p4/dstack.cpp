@@ -20,7 +20,7 @@ void Dstack::push(double value)
 
 }
 
-int Dstack::pop()
+double Dstack::pop()
 {
     double value = 0;
 

@@ -30,7 +30,7 @@ class Dstack
 
     public:
         void push(double value);
-        int pop();
+        double pop();
         int size(){return Lsize;};
         void incrementSize(){Lsize++;};
         void decrementSize(){Lsize--;};
