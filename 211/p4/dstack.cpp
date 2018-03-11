@@ -3,6 +3,8 @@
 //mbeck16
 
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 #include "dstack.h"
 
 using namespace std;
@@ -36,9 +38,10 @@ double Dstack::pop()
     }
     else
     {
-        
+        cerr << "Error: Invalid expression." << endl;
+        exit(EXIT_FAILURE);
 
-    }
+    } 
 }
 
 bool Dstack::empty()

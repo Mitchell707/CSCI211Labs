@@ -59,6 +59,11 @@ int main()
                         i = i + 2; 
                     }
                 }
+                else if(isdigit(input[i + 2]))
+                {
+                        num.push(((input[i] - 48) * 100) + ((input[i + 1] - 48) * 10) + (input[i + 2] - 48));
+                        i = i + 3;
+                }
                 else
                 {
                    num.push(((input[i] - 48) * 10) + (input[i + 1] - 48));
@@ -143,10 +148,15 @@ int main()
         }
     }
 
+    if(num.size() > 1)
+    {
+        cerr << "Error: Invalid expression." << endl;
+        return 1;
+    }
 
     for(int i = 0; i < num.size(); i++)
     {
-        cout << num.pop() << endl;   
+        //cout << num.pop() << endl;   
         
     }
 }
