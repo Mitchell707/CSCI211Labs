@@ -153,6 +153,10 @@ int main()
         cerr << "Error: Invalid expression." << endl;
         return 1;
     }
+    else
+    {
+        cout << num.pop() << endl;
+    }
 
     for(int i = 0; i < num.size(); i++)
     {
