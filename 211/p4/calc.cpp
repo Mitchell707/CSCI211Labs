@@ -31,37 +31,37 @@ int main()
 {
     getline(cin, input);
 
-    for(int i = 0; i < input.size(); i++)
+    for(int i = 0; i < input.size(); i++)//Runs through the whole input
     {
-        if(isdigit(input[i]))
+        if(isdigit(input[i]))//Checks if the current char is a digit
         {
-            if(isdigit(input[i + 1]))
+            if(isdigit(input[i + 1]))//checks if the digit has at least two digits
             {
-                if(input[i + 2] == '.')
+                if(input[i + 2] == '.')//checks if the two digit number has a decimal
                 {
-                    if(isdigit(input[i + 3]))
+                    if(isdigit(input[i + 3]))//Check if the digit after the decimal is a digit
                     {
-                        if(isdigit(input[i + 4]))
+                        if(isdigit(input[i + 4]))//Checks if the second character after the decimal is a digit
                         {
-                            double temp = ((input[i] - 48) * 10) + (input[i + 1] - 48) + ((input[i + 3] - 48) * .1) + ((input[i + 4] - 48) * .01);
+                            double temp = ((input[i] - 48) * 10) + (input[i + 1] - 48) + ((input[i + 3] - 48) * .1) + ((input[i + 4] - 48) * .01);//Math will multiply the digits accordingly to make the correct number with a two digit number and two decimal places.
                             num.push(temp);
-                            i = i + 4;
+                            i = i + 4;// adds the correct number to i to adjust the indexing
                         }
                         else
                         {
-                            num.push(((input[i] - 48) * 10) + (input[i + 1] - 48) + ((input[i + 3] - 48) * .1));
-                            i = i + 3;
+                            num.push(((input[i] - 48) * 10) + (input[i + 1] - 48) + ((input[i + 3] - 48) * .1));//Math adjust the string to a two digit number with one decimal.
+                            i = i + 3;//adds the correct number to i to adjust the indexing
                         }
                     }
                     else
                     {
-                        num.push(((input[i] - 48) * 10) + (input[i + 1] - 48));
+                        num.push(((input[i] - 48) * 10) + (input[i + 1] - 48));//converts the string to a two digit number
                         i = i + 2; 
                     }
                 }
-                else if(isdigit(input[i + 2]))
+                else if(isdigit(input[i + 2]))//checks for a three digit number
                 {
-                        num.push(((input[i] - 48) * 100) + ((input[i + 1] - 48) * 10) + (input[i + 2] - 48));
+                        num.push(((input[i] - 48) * 100) + ((input[i + 1] - 48) * 10) + (input[i + 2] - 48));//three character digit to a three digit number
                         i = i + 3;
                 }
                 else
@@ -71,27 +71,25 @@ int main()
                     //count++;
                 }
             }
-            else if(input[i + 1] == '.')
+            else if(input[i + 1] == '.')//checks if the second character is a decimal
             {
-                if(isdigit(input[i + 2]))
+                if(isdigit(input[i + 2]))//checks the first character after the decimal
                 {
-                    if(isdigit(input[i + 3]))
+                    if(isdigit(input[i + 3]))//checks the second character after the decimal
                     {
-                        
-                        
-                        double temp = ((input[i] - 48) + ((input[i + 2] - 48) * .1) + (input[i + 3] - 48) * .01);
+                        double temp = ((input[i] - 48) + ((input[i + 2] - 48) * .1) + (input[i + 3] - 48) * .01);//turns the characters into a double with one whole number and two decimal numbers
                         num.push(temp);
                         i = i + 3;
                     }
                     else
                     {
-                        num.push((((input[i] - 48) + (input[i + 2] - 48) * .1)));
+                        num.push((((input[i] - 48) + (input[i + 2] - 48) * .1)));//turns the characters into a double with one whole number and one decimal place
                         i = i + 2;
                     }
                 }
                 else
                 {
-                    num.push(input[i] - 48);
+                    num.push(input[i] - 48);//converts one character into a digit if there is no digit after the decimal place
                     i++;
                 }
             }
@@ -103,20 +101,20 @@ int main()
             //count++;
 
         }
-        else if(input[i] == '.')
+        else if(input[i] == '.')//Checks if the first character is a decimal
         {
-            if(isdigit(input[i + 1]))
+            if(isdigit(input[i + 1]))//Checks if the first character after the decimal is a digit
             {
-                if(isdigit(input[i + 2]))
+                if(isdigit(input[i + 2]))//checks if the second character after the decimal is a digit.
                 {
-                    double temp = (((input[i + 1] - 48) * .1) + (input[i + 2] - 48) * .01);
+                    double temp = (((input[i + 1] - 48) * .1) + (input[i + 2] - 48) * .01);//converts the characters into a two decimal place digit
                     //cout << temp << endl;
                     num.push(temp);
                     i = i + 2;
                 }
                 else
                 {
-                    num.push((input[i + 1] - 48) * .1);
+                    num.push((input[i + 1] - 48) * .1);//makes a one decimal place double
                     i++;
                 }
             }
@@ -148,23 +146,16 @@ int main()
         }
     }
 
-    if(num.size() > 1)
+    if(num.size() > 1)//if there is more than one digit in the stack it will return an error
     {
         cerr << "Error: Invalid expression." << endl;
         return 1;
     }
     else
     {
-        cout << num.pop() << endl;
-    }
-
-    for(int i = 0; i < num.size(); i++)
-    {
-        //cout << num.pop() << endl;   
-        
+        cout << num.pop() << endl;//pops the last number in the stack
     }
 }
-
 
 
 double sum(double a, double b)
@@ -192,14 +183,14 @@ double pow(double a, double b)
     
     double temp = a;
     
-    if(b == 0)
+    if(b == 0)//makes sure anything to the 0 power is 1
     {
         return 1;
     }
 
     for(int i = 0; i < b - 1; i++)
     {
-        a = temp * a;
+        a = temp * a;//multiplies the original number "a" by the new "a" and sets it to a new "a" for each i for b-1
     }
 
     return a;
