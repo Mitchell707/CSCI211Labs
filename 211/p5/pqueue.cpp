@@ -10,14 +10,14 @@
 
 using namespace std;
 
-Pqueue::Pqueue()
+Pqueue::Pqueue() //Creates empty queue
 {
     m_head = NULL;
     m_length = 0;
 
 }
 
-Pqueue::~Pqueue()
+Pqueue::~Pqueue() //Deletes the queue
 {
     while(m_head)
     {
@@ -29,7 +29,7 @@ Pqueue::~Pqueue()
     }
 }
 
-void Pqueue::enqueue(Cust* cust, int priority)
+void Pqueue::enqueue(Cust* cust, int priority) //Inserts an object into the queue with a priority ordering
 {
     if(!m_head || m_head->m_priority > priority)
     {
@@ -47,7 +47,7 @@ void Pqueue::enqueue(Cust* cust, int priority)
     }
 }
 
-void Pqueue::dequeue()
+void Pqueue::dequeue() //Removes object from queue
 {
 
 

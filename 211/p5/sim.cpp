@@ -14,7 +14,8 @@ string title = "";
 int t = 0;
 int items = 0;
 
-Pqueue pq;
+Pqueue store;
+Pqueue checker;
 
 int main()
 {
@@ -28,9 +29,10 @@ int main()
 
         cin >> items;
         
-        pq.enqueue(new Cust(name, title, t, items), t);
+        store.enqueue(new Cust(name, title, t, items), t);
 
     }
+    
     
 
     
