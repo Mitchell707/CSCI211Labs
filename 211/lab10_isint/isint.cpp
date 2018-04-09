@@ -5,9 +5,19 @@ using namespace std;
 
 bool is_int(char str[])
 {
-    // replace this will the real code...
-    return true;
-
+    
+    if(isdigit(*str))
+    {
+        return is_int(str + 1);
+    }
+    else if(*str == '\0')
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 int main()

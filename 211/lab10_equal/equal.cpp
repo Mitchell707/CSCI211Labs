@@ -4,8 +4,20 @@ using namespace std;
 bool equal_string(const char str1[], const char str2[])
 {
 
-    // replace this will the real code...
-    return true;
+    //BNotyh equal null, one equal null, both dont equal same char.
+    
+    if(*str1 != *str2)// || (str1 == 0 && str2 != 0) || (str1 != 0 && str2 == 0))
+    {   
+        return false;
+    }
+    else if(*str1 == '\0' && *str2 == '\0')
+    {
+        return true;
+    }
+    else if(*str1 == *str2)
+    {
+        return equal_string(str1 + 1, str2 + 1);
+    }
 
 }
 

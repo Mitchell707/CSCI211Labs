@@ -11,6 +11,7 @@
 
 using namespace std;
 
+string temp = "";
 string input = "";
 double value = 0;
 
