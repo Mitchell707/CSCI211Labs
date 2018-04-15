@@ -1,3 +1,7 @@
+//main.cpp
+//Beck, Mitchell
+//mbeck16
+
 /***
     main() program for the 211 drawing program (p6) 
 
