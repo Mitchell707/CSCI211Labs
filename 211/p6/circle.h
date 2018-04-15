@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Shape
+class Circle
 {
   private:
   
