@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class Circle
+class Grid
 {
   private:
   
