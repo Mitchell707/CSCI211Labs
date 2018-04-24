@@ -16,11 +16,11 @@ void Grid::set(int x, int y, char c)
 
 void Grid::print()
 {
-    for(int x = 0; x < 60; x++)
+    for(int x = 0; x < 24; x++)
     {
-        for(int y = 0; y < 24; x++)
+        for(int y = 0; y < 60; y++)
         {
-            cout << arr[x][y];
+            cout << arr[y][x];
 
         }
 

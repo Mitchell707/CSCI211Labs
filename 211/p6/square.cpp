@@ -21,7 +21,7 @@ void Square::draw(Grid &grid)
 {
     
     //grid.arr[x][y] = "*";
-    grid.set(x, y, '*');
+    grid.set(x + size, y + size, '*');
 
     for(int i = x; i < x + size; i++)
     {

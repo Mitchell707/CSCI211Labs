@@ -32,7 +32,7 @@ using namespace std;
 #include "point.h"
 #include "grid.h"
 
-int main()
+int Not_main()
 {
     string shape;
     int x, y;
@@ -75,6 +75,8 @@ int main()
         }
     }
 
+    //cout << "I" << endl;
+
     // Instantiate a Grid object to draw all the shapes into
     Grid grid;
 
@@ -84,6 +86,8 @@ int main()
     {
       shapes[i]->draw(grid);
     }
+    
+    //cout << "II" << endl;
 
     // now that all the shapes have been drawn in the grid, print the grid
     grid.print();
