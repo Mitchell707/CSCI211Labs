@@ -8,6 +8,7 @@ void draw(Grid &grid)
   grid.set(59,23,'*');
 }
 
+/*
 int main()
 {
   cerr << "Redirect the standard output to a file and make sure the output is\n"
@@ -19,3 +20,4 @@ int main()
   g.print();
   
 }
+*/

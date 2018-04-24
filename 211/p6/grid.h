@@ -16,7 +16,7 @@ class Grid
     char arr[60][24];
 
   public:
-    Grid();
+    Grid(){}
     void set(int, int, char);
     void print();
 
