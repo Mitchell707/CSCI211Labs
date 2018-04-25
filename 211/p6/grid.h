@@ -18,15 +18,13 @@ class Grid
 
   public:
     Grid()
-    {
-        //arr[1][1] = 'R';
-        
+    {  
         for(int x = 0; x < 24; x++)
         {
             for(int y = 0; y < 60; y++)
             {
-                //grid.set(x, y, o);
-                arr[y][x] = 'X';
+                arr[y][x] = ' ';
+            
             }
         }
     }

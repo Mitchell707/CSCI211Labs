@@ -9,21 +9,15 @@
 #include "shape.h"
 
 using namespace std;
-/*
-Square(int a, int b, int m_size) : Shape(x, y)
-{
-    size = m_size;
-
-}
-*/
 
 void Square::draw(Grid &grid)
 {
-    
+    size = size - 1;
+
     //grid.arr[x][y] = "*";
     grid.set(x + size, y + size, '*');
 
-    for(int i = x; i < x + size; i++)
+    for(int i = x; i < x + size; i++)//draws two lines along the x axis size length
     {
         //grid.arr[i][y] = "*";
         //grid.arr[i][y + size] = "*";
@@ -32,7 +26,7 @@ void Square::draw(Grid &grid)
         grid.set(i, y + size, '*');
     }
 
-    for(int i = y; i < y + size; i++)
+    for(int i = y; i < y + size; i++)//draws two lines along the y axis size length
     {
         //grid.arr[x][i] = "*";
         //grid.arr[x + size][i] = "*";

@@ -12,14 +12,17 @@ using namespace std;
 
 void Triangle::draw(Grid &grid)
 {
+    //draws top point of the triangle
     grid.set(x + 2, y, '+');
-    
+
+    //draws the middle
     grid.set(x + 1, y + 1, '+');
     grid.set(x + 3, y + 1, '+');
 
-    for(int i = x; i < x + 4; i++)
+    //uses a loop to draw the bottom five '+'"
+    for(int i = x; i < x + 5; i++)
     {
-        grid.set(x + i, y + 3, '+');
+        grid.set(i, y + 2, '+');
     }
 
 }

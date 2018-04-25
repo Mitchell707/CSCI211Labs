@@ -32,7 +32,7 @@ using namespace std;
 #include "point.h"
 #include "grid.h"
 
-int Not_main()
+int main()
 {
     string shape;
     int x, y;

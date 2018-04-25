@@ -12,6 +12,8 @@ using namespace std;
 
 void Point::draw(Grid &grid)
 {
-    grid.set(x, y, c);
-
+    if(x >= 24 || y >= 60)//Makes sure the point is within the grid
+    {
+        grid.set(x, y, c);
+    }
 }
