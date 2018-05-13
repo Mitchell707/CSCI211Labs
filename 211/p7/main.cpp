@@ -46,11 +46,11 @@ int main()
             getline(cin, temp);
             if(tree.find(temp) == true)
             {
-                cout << temp << " is in tree.\n";
+                cout << "<" << temp << "> is in tree.\n";
             }
             else
             {
-                cout << temp << " is not in tree.\n";
+                cout << "<" << temp << "> is not in tree.\n";
             }
         }
         else if(command == "print")
@@ -102,6 +102,7 @@ int main()
         else
         {
             cerr << "Illegal command <" << command << ">.\n";
+
         }
 
     }
